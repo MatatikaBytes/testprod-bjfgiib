@@ -1,0 +1,12 @@
+{
+  "plugin_type": "transforms",
+  "name": "dbt-googleads",
+  "namespace": "tap_googleads",
+  "variant": "meltano",
+  "label": "dbt-googleads",
+  "repo": "https://github.com/Matatika/dbt-tap-googleads",
+  "pip_url": "https://github.com/Matatika/dbt-tap-googleads@v0.4.0",
+  "vars": {
+    "schema": "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+  }
+}

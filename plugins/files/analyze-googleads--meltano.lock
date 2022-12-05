@@ -1,0 +1,12 @@
+{
+  "plugin_type": "files",
+  "name": "analyze-googleads",
+  "namespace": "tap_googleads",
+  "variant": "meltano",
+  "label": "analyze-googleads",
+  "repo": "https://github.com/Matatika/analyze-googleads",
+  "pip_url": "git+https://github.com/Matatika/analyze-googleads@v0.5.0",
+  "update": {
+    "analyze/datasets/tap-googleads": "true"
+  }
+}

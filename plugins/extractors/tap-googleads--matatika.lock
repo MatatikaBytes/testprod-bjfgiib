@@ -1,0 +1,98 @@
+{
+  "plugin_type": "extractors",
+  "name": "tap-googleads",
+  "namespace": "tap_googleads",
+  "variant": "matatika",
+  "label": "Google Ads",
+  "docs": "https://www.matatika.com/docs/data-sources/tap-googleads/",
+  "repo": "https://github.com/Matatika/tap-googleads",
+  "pip_url": "git+https://github.com/Matatika/tap-googleads@v0.3.1",
+  "capabilities": [
+    "state",
+    "catalog",
+    "discover"
+  ],
+  "settings": [
+    {
+      "name": "oauth_credentials.authorization_url",
+      "kind": "hidden",
+      "value": "https://oauth2.googleapis.com/token",
+      "label": "OAuth identity provider authorization endpoint used create and refresh tokens",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.scope",
+      "kind": "hidden",
+      "value": "https://www.googleapis.com/auth/adwords",
+      "label": "OAuth scopes we need to request access to",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.access_token",
+      "kind": "hidden",
+      "label": "Access Token",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.refresh_token",
+      "kind": "hidden",
+      "label": "OAuth Refresh Token",
+      "protected": false
+    },
+    {
+      "name": "oauth_credentials.refresh_proxy_url",
+      "kind": "hidden",
+      "label": "Will be called with 'oauth_credentials.refresh_token' to refresh the access token",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "oauth_credentials.refresh_proxy_url_auth",
+      "kind": "hidden",
+      "label": "Sets Authorization header on 'oauth_credentials.refresh_url' request",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "oauth_credentials.client_id",
+      "kind": "hidden",
+      "label": "OAuth Client ID",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "oauth_credentials.client_secret",
+      "kind": "hidden",
+      "label": "OAuth Client Secret",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "start_date",
+      "kind": "date_iso8601",
+      "label": "Start Date",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "end_date",
+      "kind": "date_iso8601",
+      "label": "End Date",
+      "protected": false,
+      "required": "false"
+    },
+    {
+      "name": "developer_token",
+      "kind": "hidden",
+      "value": "DYSuW0qdfU5-jti8Zdh1HQ",
+      "label": "Developer Token",
+      "protected": false
+    },
+    {
+      "name": "customer_id",
+      "kind": "string",
+      "label": "Customer Id",
+      "protected": false
+    }
+  ]
+}

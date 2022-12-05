@@ -5,3 +5,28 @@ environments:
 - name: staging
 - name: prod
 project_id: project-1a4c3f47-2fcc-4c34-b7c8-a79a22fe6ce9
+plugins:
+  extractors:
+  - name: tap-googleads
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-googleads@v0.3.1
+  loaders:
+  - name: target-postgres
+    variant: transferwise
+    pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.1.0
+  transforms:
+  - name: dbt-googleads
+    variant: meltano
+    pip_url: https://github.com/Matatika/dbt-tap-googleads@v0.4.0
+  transformers:
+  - name: dbt
+    variant: dbt
+    pip_url: "dbt-core~=1.0.0 dbt-postgres~=1.0.0 dbt-redshift~=1.0.0 dbt-snowflake~=1.0.0\
+      \ dbt-bigquery~=1.0.0\n"
+  files:
+  - name: analyze-googleads
+    variant: meltano
+    pip_url: git+https://github.com/Matatika/analyze-googleads@v0.5.0
+  - name: files-dbt
+    variant: dbt
+    pip_url: git+https://github.com/Matatika/files-dbt@v1.0.x.1
