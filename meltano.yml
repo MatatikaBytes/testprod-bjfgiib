@@ -10,6 +10,9 @@ plugins:
   - name: tap-googleads
     variant: matatika
     pip_url: git+https://github.com/Matatika/tap-googleads@v0.3.1
+  - name: tap-google-analytics
+    variant: meltano
+    pip_url: git+https://github.com/Matatika/tap-google-analytics@v0.3.0
   loaders:
   - name: target-postgres
     variant: transferwise
@@ -18,6 +21,9 @@ plugins:
   - name: dbt-googleads
     variant: meltano
     pip_url: https://github.com/Matatika/dbt-tap-googleads@v0.4.0
+  - name: dbt-google-analytics
+    variant: meltano
+    pip_url: https://github.com/Matatika/dbt-tap-google-analytics@v0.4.0
   transformers:
   - name: dbt
     variant: dbt
@@ -30,3 +36,6 @@ plugins:
   - name: files-dbt
     variant: dbt
     pip_url: git+https://github.com/Matatika/files-dbt@v1.0.x.1
+  - name: analyze-google-analytics
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/analyze-google-analytics@v0.4.0
